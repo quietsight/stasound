@@ -1,0 +1,165 @@
+* {zoom: 1;}
+
+html, body {
+width: 100%;
+height: 100%;
+	background-color: #6800CF;
+	font-family: helvetica, sans-serif;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+	background-image: url('images/webtreats_light_wood1b.jpg');
+}
+
+a, img {border:none;	}
+
+address, article, aside, canvas,
+figcaption, figure, footer, header,
+hgroup, nav, section, summary {
+display: block;
+}
+
+a:link {color: #fff;text-decoration: none;}
+a:visited {color: #fff;text-decoration: none;}
+a:hover, a:focus {color: #ffee00;text-decoration: none;text-shadow: 0 0 5px yellow;}
+a:active {color: #fff;text-decoration: none;}
+
+/* HEADER */
+#header {
+	max-width: 960px;
+	min-width: 960px;
+	margin: 10px auto -10px;
+}
+
+.logo {
+	position: relative;
+	float: left;
+	left: 40px;
+}
+
+.headerinfo {
+	color: #fff;
+	font-size: 18px;
+	float: right;
+	margin: 0 10px;
+}
+
+/* NAV */
+.nav {
+	width: 100%;
+	height: 40px;
+	background-color: #6800CF;
+	box-shadow: 0 0px 5px #000;
+}
+
+.navblock {
+	position: relative;
+	max-width: 960px;
+	top: 8px;
+	margin: 0 auto;
+	
+}	
+
+.navblock p {
+	font-family: "adelle", sans-serif;
+	min-width: 960px;	
+	color: #fff;
+	text-align: center;
+	font-size: 24px;
+	text-shadow: 1px 1px 2px #000
+}
+
+.navlink {
+	margin: 0 10px;
+}
+
+
+/* MAIN CONTENT */
+#maincontent {
+	width: 100%;
+	margin: -38px auto;
+	background-image: url('images/straws.png');
+}
+
+.contentblock {
+	width: 960px;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+.shadowtop {
+	position: relative;
+	background-image: url('images/shadow_top.png');
+
+	min-width: 100%;
+	top: 0;
+	height: 20px;
+	background-repeat: repeat-x;
+
+}
+
+.shadowbottom {
+	position: relative;
+	background-image: url('images/shadow_bottom.png');
+	bottom: 0;
+	min-width: 100%;
+	height: 20px;
+	background-repeat: repeat-x;
+
+}
+
+
+/* INDEX */
+.tileblock {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.tileblock img {
+	float: left;
+	margin: 2%;
+	width: 46%;
+}
+
+
+/* FOOTER */
+#footer {
+	width: 100%;
+	height: 100px;
+	bottom: 0;
+	background-color: #6800CF;
+	box-shadow: 0 0px 5px #000;
+}
+
+.footerblock {
+	max-width: 960px;
+	min-width: 960px;
+	margin: 10px auto;
+}
+
+.footerinfo {
+	
+	color: white;
+	line-height: 20px;
+}
+
+
+/* EXTRAS */
+.clear {
+	clear: both;
+}
+
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -100px;
+}
+#footer, .push {
+	height: 100px;
+	clear: both;
+}
+
+
+/* MOBILE */
+
