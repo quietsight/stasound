@@ -8,7 +8,7 @@ height: 100%;
 	font-size: 16px;
 	padding: 0;
 	margin: 0;
-	background-image: url('images/webtreats_light_wood1b.jpg');
+	background-image: url('images/website/webtreats_light_wood1b.jpg');
 }
 
 a, img {border:none;	}
@@ -28,20 +28,34 @@ a:active {color: #fff;text-decoration: none;}
 #header {
 	max-width: 960px;
 	min-width: 960px;
-	margin: 10px auto -10px;
+	margin: 10px auto -20px;
 }
 
 .logo {
+	width: 300px;
+	height: 75px;
+	background-image: url('images/website/sslogo.png');
 	position: relative;
-	float: left;
-	left: 40px;
+	margin: 0 auto;
+	transition: background-image .5s ease-out; 
+	-webkit-transition: background-image .5s ease-out;
+	-moz-transition: background-image .5s ease-out;
+	-o-transition: background-image .5s ease-out;
+}
+
+.logo:hover {
+	background-image: url('images/website/sslogo-hover.png');
+}
+
+.logo:active {
+	-webkit-transition: background-image .5s ease-out;
 }
 
 .headerinfo {
 	color: #fff;
 	font-size: 18px;
 	float: right;
-	margin: 0 10px;
+	margin-left: 15px;
 }
 
 /* NAV */
@@ -78,18 +92,18 @@ a:active {color: #fff;text-decoration: none;}
 #maincontent {
 	width: 100%;
 	margin: -38px auto;
-	background-image: url('images/straws.png');
+	background-image: url('images/website/straws.png');
 }
 
 .contentblock {
 	width: 960px;
 	margin: 20px auto;
-	padding: 20px;
+	padding: 20px 0;
 }
 
 .shadowtop {
 	position: relative;
-	background-image: url('images/shadow_top.png');
+	background-image: url('images/website/shadow_top.png');
 
 	min-width: 100%;
 	top: 0;
@@ -100,7 +114,7 @@ a:active {color: #fff;text-decoration: none;}
 
 .shadowbottom {
 	position: relative;
-	background-image: url('images/shadow_bottom.png');
+	background-image: url('images/website/shadow_bottom.png');
 	bottom: 0;
 	min-width: 100%;
 	height: 20px;
@@ -119,30 +133,240 @@ a:active {color: #fff;text-decoration: none;}
 	float: left;
 	margin: 2%;
 	width: 46%;
+	border-radius: 10px;
+}
+
+.indexblock {
+	float: left;
+	width: 400px;
+	height: 250px;
+	margin: 20px;
+	transition: box-shadow .5s ease-out; 
+	-webkit-transition: box-shadow .5s ease-out;
+	-moz-transition: box-shadow .5s ease-out;
+	-o-transition: box-shadow .5s ease-out;
+	border-radius: 10px;
+	font-family: "adelle", sans-serif;
+	text-align: center;
+	line-height: 0;
+}
+
+.indexblock .text {
+	visibility:hidden;
+	opacity: 0;
+	transition: all .5s ease-out; 
+	-webkit-transition: all .5s ease-out;
+	-moz-transition: all .5s ease-out;
+	-o-transition: all .5s ease-out;
+}
+
+.indexblock:hover .text {
+	visibility:visible;
+	opacity: 1;
+	color: #fff;
+	text-shadow: 2px 2px 5px #000;
+}
+
+.indexblock:active .text {
+	-webkit-transition: opacity .5s ease-out;
+}
+
+.indexblock:hover {
+	box-shadow: 0 0 15px #6800CF;
+}
+
+.indexdog {
+	background: url('images/tiledog.jpg') #6800CF;
+	font-size: 140px;
+	
+}
+
+.indexcat {
+	background: url('images/tilecat.jpg') #6800CF;
+	font-size: 140px;
+	
+}
+
+.indexhorse {
+	background: url('images/tilehorse.jpg') #6800CF;
+	font-size: 100px;
+	line-height: 80px;
+	
+}
+
+.indexfix {
+	background: url('images/tilecow.jpg') #6800CF;
+	font-size: 75px;
+	line-height: 120px;
+}
+
+/* STA-NATURAL LINK */
+.promotional {
+	position: relative;
+	width: 350px;
+	margin: 40px auto;
+	text-align: center;
+	background-color: #5B9C00;
+	padding: 20px;
+	box-shadow: inset 0 0 10px #000;
+}
+
+.promotional img {
+	float: left;
+	width: 80px;
+	height: 80px;
+	margin-top: -5px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+
+
+
+
+
+/* MULTIPAGE */
+h1 {
+	font-family: "adelle", sans-serif;
+	text-align: center;
+	margin: 0 auto -10px;
+	color: #6800CF;
+	
+}
+
+.pageblock {
+	width: 660px;
+	margin: 0 auto;
+}
+
+.blockimg {
+	float: left;
+	margin: 20px;
+	box-shadow: 5px 5px 10px #000;
+}
+
+.pageblurb {
+	height: auto;
+	padding: 20px;
+	background-color: #6800CF;
+	color: white;
+	margin: 40px auto 10px;
+	border-radius: 10px;
+}
+
+
+/* SHOPPING */
+.shopblock {
+	float: left;
+	max-width: 300px;
+	margin-right: 20px;
+	margin-top: 20px;
+}
+
+.shopblock img {
+	float: left;
+}
+
+h3 {
+	position: relative;
+	top: 20px;
+	font-family: "adelle", sans-serif;
+	font-size: 22px;
+	text-align: center;
+}
+
+.subtitle {
+	text-align: center;
+	font-style: italic;
+	font-size: 14px;
+	color: white;
+	background-color: #AB80D8;
+}
+
+.shopbuttons {
+	width: 280px;
+	margin: 0 auto;
+	color: #fff;
+	font-family: "adelle";
+	text-align: center;
+}
+
+.moreinfo {
+	float: left;
+	background-color: #6800CF;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.buynow {
+	float: left;
+	background-color: #6800CF;
+	padding: 10px;
+	margin-left: 10px;
+	border-radius: 10px;
 }
 
 
 /* FOOTER */
 #footer {
+	display: block;
+	overflow: hidden;
 	width: 100%;
 	height: 100px;
-	bottom: 0;
+	margin-bottom: -10px;
 	background-color: #6800CF;
 	box-shadow: 0 0px 5px #000;
 }
 
 .footerblock {
-	max-width: 960px;
-	min-width: 960px;
-	margin: 10px auto;
+	position: relative;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+}
+
+.footeritem {
+	float: left;
+}
+
+.footerlogo img {
+	position: relative;
+	top: 25px;
+	left: 20px;
+	width: 200px;
+	height: auto;
 }
 
 .footerinfo {
-	
-	color: white;
-	line-height: 20px;
+	margin-left: 80px;
 }
 
+.footericons {
+	margin-left: 60px;
+	text-align: center;
+}
+
+.footericons img {
+	width: 32px;
+	height: auto;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+
+.footerlinks {
+	margin-left: 30px;
+}
+
+.footerlinks li {
+	list-style: none;
+}
+
+#footer, .push {
+	height: 100px;
+	clear: both;
+}
 
 /* EXTRAS */
 .clear {
@@ -155,10 +379,7 @@ height: auto !important;
 height: 100%;
 margin: 0 auto -100px;
 }
-#footer, .push {
-	height: 100px;
-	clear: both;
-}
+
 
 
 /* MOBILE */
