@@ -356,13 +356,14 @@ h3 {
 }
 
 .veternarian {
-	text-align: center;
+	text-align: left;
 	font-size: 18px;
 	font-weight: bold;
 }
 
 .moredesc {
 	height: auto;
+	padding-top: 20px;
 }
 
 .morevid {
@@ -383,6 +384,11 @@ h4 {
 	text-align: center;
 	font-family: "adelle", sans-serif;
 	font-size: 18px;
+}
+
+.ingredientblock {
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .ingredientlist {
@@ -407,11 +413,13 @@ h4 {
 }
 
 .moreprice {
-	float: right;
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .morebuy {
-	float: right;
+	float: left;
 }
 
 
