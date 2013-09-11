@@ -3,7 +3,7 @@
 html, body {
 width: 100%;
 height: 100%;
-	background-color: #6800CF;
+	background-color: #8000D3;
 	font-family: helvetica, sans-serif;
 	font-size: 16px;
 	padding: 0;
@@ -23,6 +23,10 @@ a:link {color: #fff;text-decoration: none;}
 a:visited {color: #fff;text-decoration: none;}
 a:hover, a:focus {color: #ffee00;text-decoration: none;text-shadow: 0 0 5px yellow;}
 a:active {color: #fff;text-decoration: none;}
+
+ul {
+	list-style: none;
+}
 
 /* HEADER */
 #header {
@@ -62,7 +66,7 @@ a:active {color: #fff;text-decoration: none;}
 .nav {
 	width: 100%;
 	height: 40px;
-	background-color: #6800CF;
+	background-color: #8000D3;
 	box-shadow: 0 0px 5px #000;
 }
 
@@ -75,7 +79,7 @@ a:active {color: #fff;text-decoration: none;}
 }	
 
 .navblock p {
-	font-family: "adelle", sans-serif;
+	font-family: "adelle", serif;
 	min-width: 960px;	
 	color: #fff;
 	text-align: center;
@@ -146,7 +150,7 @@ a:active {color: #fff;text-decoration: none;}
 	-moz-transition: box-shadow .5s ease-out;
 	-o-transition: box-shadow .5s ease-out;
 	border-radius: 10px;
-	font-family: "adelle", sans-serif;
+	font-family: "adelle", serif;
 	text-align: center;
 	line-height: 0;
 }
@@ -172,11 +176,11 @@ a:active {color: #fff;text-decoration: none;}
 }
 
 .indexblock:hover {
-	box-shadow: 0 0 15px #6800CF;
+	box-shadow: 0 0 15px #8000D3;
 }
 
 .indexdog {
-	background: url('images/tiledog.jpg') #6800CF;
+	background: url('images/tiledog.jpg') #8000D3;
 	font-size: 140px;
 	
 }
@@ -188,14 +192,14 @@ a:active {color: #fff;text-decoration: none;}
 }
 
 .indexhorse {
-	background: url('images/tilehorse.jpg') #6800CF;
+	background: url('images/tilehorse.jpg') #8000D3;
 	font-size: 100px;
 	line-height: 80px;
 	
 }
 
 .indexfix {
-	background: url('images/tilecow.jpg') #6800CF;
+	background: url('images/tilecow.jpg') #8000D3;
 	font-size: 75px;
 	line-height: 120px;
 }
@@ -204,7 +208,7 @@ a:active {color: #fff;text-decoration: none;}
 .promotional {
 	position: relative;
 	width: 350px;
-	margin: 40px auto;
+	margin: 40px auto 0;
 	text-align: center;
 	background-color: #5B9C00;
 	padding: 20px;
@@ -220,17 +224,12 @@ a:active {color: #fff;text-decoration: none;}
 	margin-right: 10px;
 }
 
-
-
-
-
-
 /* MULTIPAGE */
 h1 {
 	font-family: "adelle", sans-serif;
 	text-align: center;
 	margin: 0 auto -10px;
-	color: #6800CF;
+	color: #8000D3;
 	
 }
 
@@ -248,7 +247,7 @@ h1 {
 .pageblurb {
 	height: auto;
 	padding: 20px;
-	background-color: #6800CF;
+	background-color: #8000D3;
 	color: white;
 	margin: 40px auto 10px;
 	border-radius: 10px;
@@ -258,9 +257,9 @@ h1 {
 /* SHOPPING */
 .shopblock {
 	float: left;
-	max-width: 300px;
-	margin-right: 20px;
-	margin-top: 20px;
+	max-width: 420px;
+	margin: 20px;
+	margin-left: 30px;
 }
 
 .shopblock img {
@@ -277,33 +276,142 @@ h3 {
 
 .subtitle {
 	text-align: center;
-	font-style: italic;
-	font-size: 14px;
+	font-style: bold;
+	font-size: 18px;
+	font-family: "adelle", sans-serif;
 	color: white;
 	background-color: #AB80D8;
+	padding-top: 8px;
+	padding-bottom: 5px;
+}
+
+.productdesc {
+	height: 80px;
+}
+
+.qty {
+	text-align: right;
+	padding-right: 20px;
+	font-style: italic;
+}
+
+.price {
+	text-align: right;
+	padding-right: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 
 .shopbuttons {
-	width: 280px;
+	width: 420px;
 	margin: 0 auto;
-	color: #fff;
-	font-family: "adelle";
+	color: #8000D3;
+	font-family: "adelle", sans-serif;
 	text-align: center;
 }
 
 .moreinfo {
 	float: left;
-	background-color: #6800CF;
-	padding: 10px;
+	background-color: #10c200;
+	padding: 12px 10px 10px;
 	border-radius: 10px;
+	margin-left: 20px;
 }
 
 .buynow {
 	float: left;
-	background-color: #6800CF;
-	padding: 10px;
+	background-color: #10c200;
+	padding: 12px 10px 10px;
 	margin-left: 10px;
 	border-radius: 10px;
+}
+
+
+/* MORE INFO PAGES */
+.moreblock {
+	position: relative;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.moreproduct {
+	max-width: 200px;
+}
+
+.moreimg {
+	width: 550px;
+	margin: 10px auto;
+}
+
+.submore {
+	width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 22px;
+}
+
+.animalsq {
+	border: 2px solid #8000D3;
+	margin-left: 40px;
+}
+
+.veternarian {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.moredesc {
+	height: auto;
+}
+
+.morevid {
+	float: left;
+	margin: 0 20px 20px;
+}
+
+.morelist {
+	list-style: none;
+	font-family: "adelle", sans-serif;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+h4 {
+	text-align: center;
+	font-family: "adelle", sans-serif;
+	font-size: 18px;
+}
+
+.ingredientlist {
+	width: 250px;
+	float: left;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 0;
+}
+
+.listleft {
+	text-align: left;
+	float: left;
+}
+
+.listright {
+	text-align: right;
+}
+
+.ingredients {
+	margin-right: 40px;
+}
+
+.moreprice {
+	float: right;
+}
+
+.morebuy {
+	float: right;
 }
 
 
@@ -314,7 +422,7 @@ h3 {
 	width: 100%;
 	height: 100px;
 	margin-bottom: -10px;
-	background-color: #6800CF;
+	background-color: #8000D3;
 	box-shadow: 0 0px 5px #000;
 }
 
@@ -378,6 +486,16 @@ min-height: 100%;
 height: auto !important;
 height: 100%;
 margin: 0 auto -100px;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	margin-top: 20px;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+	background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+	background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+	background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
 }
 
 
