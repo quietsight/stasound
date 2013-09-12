@@ -239,9 +239,9 @@ h1 {
 }
 
 .blockimg {
-	float: left;
 	margin: 20px;
-	box-shadow: 5px 5px 10px #000;
+	border: 2px solid #8000D3;
+
 }
 
 .pageblurb {
@@ -286,7 +286,7 @@ h3 {
 }
 
 .productdesc {
-	height: 80px;
+	height: 75px;
 }
 
 .qty {
@@ -324,6 +324,20 @@ h3 {
 	padding: 12px 10px 10px;
 	margin-left: 10px;
 	border-radius: 10px;
+	
+}
+
+.allbutton {
+	width: 260px;
+	margin: 20px auto;
+	background-color: #8000D3;
+	font-family: "adelle", sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	padding: 1px 10px;
+	border-radius: 15px;
 }
 
 
