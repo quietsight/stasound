@@ -79,7 +79,7 @@ ul {
 }	
 
 .navblock p {
-	font-family: "adelle", serif;
+	font-family: "adelle", sans-serif;
 	min-width: 960px;	
 	color: #fff;
 	text-align: center;
@@ -204,9 +204,13 @@ ul {
 	line-height: 120px;
 }
 
+.pagetitle a:hover {
+	color: #8300CE;
+	text-shadow: none;
+}
+
 /* STA-NATURAL LINK */
 .promotional {
-	position: relative;
 	width: 350px;
 	margin: 40px auto 0;
 	text-align: center;
@@ -264,6 +268,12 @@ h1 {
 
 .shopblock img {
 	float: left;
+	margin: 0 10px;
+	max-width: 180px;
+}
+
+.bucket {
+	padding-top: 40px;
 }
 
 h3 {
@@ -290,9 +300,13 @@ h3 {
 }
 
 .qty {
-	text-align: right;
+	text-align: left;
 	padding-right: 20px;
 	font-style: italic;
+}
+
+.call {
+	text-align: right;
 }
 
 .price {
@@ -310,21 +324,62 @@ h3 {
 	text-align: center;
 }
 
-.moreinfo {
+.buynow {
+/* TEMPORARY */	
+	display: none;
+/* TEMPORARY */	
+	
+	float: right;
+	background-color: #10c200;
+	padding: 12px 10px 10px;
+	margin-left: 10px;
+	border-radius: 10px;	
+}
+
+/* TEMPORARY */	
+.calltoorder {
+	text-align: center;
+	font-family: "adelle", sans-serif;
+	font-size: 24px;
+}
+.calltoorder a:link {
+	color: black;
+}
+
+.ordergroup {
+	width: 130px;
 	float: left;
+}
+.ordername {
+	text-align: center;
+	text-indent: 12px;
+}
+.orderbutton {
+	width: 100px;
+	margin-left: 20px;
+}
+
+.texaslink {
+	font-size: 14px;
+	color: black;
+}
+
+.texaslink a:link {
+	color: black;
+}
+
+/* TEMPORARY */	
+
+.moreinfo {
+/* TEMPORARY */	
+	display: none;
+/* TEMPORARY */	
+
+	float: right;
 	background-color: #10c200;
 	padding: 12px 10px 10px;
 	border-radius: 10px;
 	margin-left: 20px;
-}
-
-.buynow {
-	float: left;
-	background-color: #10c200;
-	padding: 12px 10px 10px;
-	margin-left: 10px;
-	border-radius: 10px;
-	
 }
 
 .allbutton {
@@ -353,12 +408,13 @@ h3 {
 }
 
 .moreimg {
-	width: 550px;
+	max-width: 550px;
+	max-height: 300px;
 	margin: 10px auto;
 }
 
 .submore {
-	width: 720px;
+	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 22px;
@@ -371,18 +427,25 @@ h3 {
 
 .veternarian {
 	text-align: left;
-	font-size: 18px;
+	font-family: "adelle", sans-serif;
+	font-size: 20px;
 	font-weight: bold;
+	color: #8300CE;
 }
 
 .moredesc {
+	max-width: 600px;
 	height: auto;
 	padding-top: 20px;
+	margin: 0 auto;
 }
 
 .morevid {
+	width: 400px;
+	height: 225px;
 	float: left;
 	margin: 0 20px 20px;
+	border: 1px #8300CE solid;
 }
 
 .morelist {
@@ -398,6 +461,32 @@ h4 {
 	text-align: center;
 	font-family: "adelle", sans-serif;
 	font-size: 18px;
+}
+
+.bigquote {
+	float: left; 
+	color: #AC7ED5; 
+	font-size: 150px; 
+	line-height: 80px; 
+	padding-top: 4px; 
+	padding-right: 8px; 
+	padding-left: 3px; 
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.quoteblock {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.quoteblock img {
+	float: right;
+	padding-left: 10px;
+}
+
+.quotename {
+	font-style: italic;
+	text-align: right;
 }
 
 .ingredientblock {
