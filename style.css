@@ -259,6 +259,19 @@ h1 {
 
 
 /* SHOPPING */
+.introvid {
+	width: 420px;
+	height: auto;
+	margin: 10px auto;
+	border: 1px #8300CE solid;
+}
+
+.introcaption {
+	text-align: center;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
 .shopblock {
 	float: left;
 	max-width: 420px;
@@ -603,13 +616,11 @@ hr {
 	border: 0;
 	height: 1px;
 	margin-top: 20px;
-	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-	background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-	background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-	background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+	background-image: -webkit-linear-gradient(left, rgba(131,0,206,0), rgba(131,0,206,1), rgba(131,0,206,0)); 
+	background-image:    -moz-linear-gradient(left, rgba(131,0,206,0), rgba(131,0,206,1), rgba(131,0,206,0));
+	background-image:     -ms-linear-gradient(left, rgba(131,0,206,0), rgba(131,0,206,1), rgba(131,0,206,0)); 
+	background-image:      -o-linear-gradient(left, rgba(131,0,206,0), rgba(131,0,206,1), rgba(131,0,206,0));
 }
-
-
 
 /* MOBILE */
 
