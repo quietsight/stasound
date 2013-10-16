@@ -350,7 +350,7 @@ h3 {
 	border-radius: 10px;	
 }
 
-/* TEMPORARY */	
+/* \/\/\/ TEMPORARY */	
 .calltoorder {
 	text-align: center;
 	font-family: "adelle", sans-serif;
@@ -382,7 +382,7 @@ h3 {
 	color: black;
 }
 
-/* TEMPORARY */	
+/* ^^^^^^ TEMPORARY */	
 
 .moreinfo {
 	float: right;
@@ -419,8 +419,12 @@ h3 {
 
 .moreimg {
 	max-width: 550px;
-	max-height: 300px;
-	margin: 10px auto;
+	height: 300px;
+	margin: 20px auto 30px;
+}
+
+.skinnyproduct {
+	margin-left: 50px;
 }
 
 .submore {
@@ -454,7 +458,7 @@ h3 {
 	width: 400px;
 	height: 225px;
 	float: left;
-	margin: 0 20px 20px;
+	margin: 0 0 20px 60px;
 	border: 1px #8300CE solid;
 }
 
@@ -465,6 +469,7 @@ h3 {
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 1.5;
+	margin-top: 50px
 }
 
 h4 {
