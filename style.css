@@ -266,6 +266,13 @@ h1 {
 	border: 1px #8300CE solid;
 }
 
+.madeinusa {
+	width: 720px;
+	height: auto;
+	margin: 10px auto;
+	border: 1px #8300CE solid;
+}
+
 .introcaption {
 	text-align: center;
 	max-width: 400px;
