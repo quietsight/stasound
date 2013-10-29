@@ -349,7 +349,7 @@ h3 {
 /* TEMPORARY */	
 	display: none;
 /* TEMPORARY */	
-	
+	color: white;
 	float: right;
 	background-color: #10c200;
 	padding: 12px 10px 10px;
@@ -392,6 +392,9 @@ h3 {
 /* ^^^^^^ TEMPORARY */	
 
 .moreinfo {
+	/* TEMPORARY */
+		display: none;
+	/* TEMPORARY */
 	float: right;
 	background-color: #10c200;
 	padding: 12px 10px 10px;
