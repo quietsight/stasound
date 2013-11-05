@@ -284,24 +284,26 @@ h1 {
 	max-width: 420px;
 	height: 345px;
 	margin: 30px;
+	height: 300px
 }
 
 .shopblock img {
 	float: left;
 	margin: 0 10px;
-	max-width: 150px;
-	max-height: 280px
+	max-width: 160px;
 }
 
 .bucket {
 	padding-top: 40px;
+	height: auto;
+	max-width: 120px;
 }
 
 h3 {
 	position: relative;
 	top: 20px;
 	font-family: "adelle", sans-serif;
-	font-size: 22px;
+	font-size: 26px;
 	text-align: center;
 }
 
@@ -317,13 +319,15 @@ h3 {
 }
 
 .productdesc {
-	height: 75px;
+	height: 90px;
 }
 
 .qty {
 	text-align: left;
 	padding-right: 20px;
 	font-style: italic;
+	margin-bottom: 50px;
+	width: 320px;
 }
 
 .call {
@@ -331,7 +335,7 @@ h3 {
 }
 
 .price {
-	text-align: right;
+	text-align: left;
 	padding-right: 20px;
 	font-weight: bold;
 	margin-bottom: 10px;
@@ -346,9 +350,7 @@ h3 {
 }
 
 .buynow {
-/* TEMPORARY */	
-	display: none;
-/* TEMPORARY */	
+
 	color: white;
 	float: right;
 	background-color: #10c200;
@@ -392,9 +394,6 @@ h3 {
 /* ^^^^^^ TEMPORARY */	
 
 .moreinfo {
-	/* TEMPORARY */
-		display: none;
-	/* TEMPORARY */
 	float: right;
 	background-color: #10c200;
 	padding: 12px 10px 10px;
