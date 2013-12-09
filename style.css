@@ -364,6 +364,17 @@ h3 {
 	border-radius: 10px;	
 }
 
+.buybucket {
+	margin-right: 18px;
+	margin-top: 5px;
+	font-family: "adelle", sans-serif;
+}
+
+.morebucket {
+	margin-right: 20px;
+	font-family: "adelle", sans-serif;
+}
+
 /* \/\/\/ TEMPORARY */	
 .calltoorder {
 	text-align: center;
@@ -376,7 +387,7 @@ h3 {
 
 .ordergroup {
 	width: 130px;
-	float: left;
+	float: right;
 }
 .ordername {
 	text-align: center;
