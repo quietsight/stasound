@@ -209,6 +209,11 @@ ul {
 	text-shadow: none;
 }
 
+.toplink {
+	text-align: center;
+	color: #222;
+}
+
 /* STA-NATURAL LINK */
 .promotional {
 	width: 350px;
@@ -294,9 +299,9 @@ h1 {
 }
 
 .bucket {
-	padding-top: 40px;
+	padding-top: 50px;
 	height: auto;
-	max-width: 120px;
+	max-width: 140px;
 }
 
 h3 {
@@ -326,12 +331,17 @@ h3 {
 	text-align: left;
 	padding-right: 20px;
 	font-style: italic;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 	width: 320px;
 }
 
 .qty1 {
 	margin-bottom: 5px;
+}
+
+.qty span {
+	font-weight: bold;
+	font-size: 18px;
 }
 
 .call {
@@ -355,7 +365,9 @@ h3 {
 }
 
 .buynow {
-
+/* TEMPORARY */
+	display: none;
+/* TEMPORARY */
 	color: white;
 	float: right;
 	background-color: #10c200;
@@ -414,7 +426,7 @@ h3 {
 	background-color: #10c200;
 	padding: 12px 10px 10px;
 	border-radius: 10px;
-	margin-left: 20px;
+	margin-right: 50px;
 }
 
 .allbutton {
