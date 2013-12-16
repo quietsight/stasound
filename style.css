@@ -393,6 +393,10 @@ h3 {
 	font-family: "adelle", sans-serif;
 }
 
+.morebucket1 {
+	padding-left: 100px;
+}
+
 /* \/\/\/ TEMPORARY */	
 .calltoorder {
 	text-align: center;
@@ -406,6 +410,10 @@ h3 {
 .ordergroup {
 	width: 130px;
 	float: left;
+	margin-left: 5px;
+}
+
+.eqgroup1 {
 	margin-left: 10px;
 }
 
@@ -415,11 +423,12 @@ h3 {
 }
 
 .txfix {
-	margin-top: 90px;
+	margin-top: 60px;
 }
 
 .eqname {
 	margin-top: 20px;
+	margin-left: -25px;
 }
 
 .orderfix {
@@ -428,6 +437,7 @@ h3 {
 
 .fix1 {
 	margin-top: -25px;
+	margin-left: 5px;
 }
 
 .descfix {
@@ -444,11 +454,10 @@ h3 {
 
 .ordername {
 	text-align: center;
-	text-indent: 12px;
 }
 .orderbutton {
 	width: 100px;
-	margin-left: 20px;
+	margin-left: 0px;
 }
 
 .ordername b {
@@ -462,6 +471,26 @@ h3 {
 
 .texaslink a:link {
 	color: black;
+}
+
+.txgroup {
+	margin-top: -15px;
+	margin-bottom: 5px;
+}
+
+.txmorelink{
+	float: left;
+	max-width: 250px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 10px;
+	padding: 5px;
+	background-color: #50297e;
+}
+
+.txmap {
+	width: 20px;
+	margin-left: 40px;
 }
 
 /* ^^^^^^ TEMPORARY */	
