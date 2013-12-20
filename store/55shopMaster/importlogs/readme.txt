@@ -1,0 +1,1 @@
+Do not delete this directory. It is used to store log files created by the Import Wizard upon importing/updating product information. The logs are then used by the Undo Import feature. Please refer to the ProductCart User Guide for more information about these features.

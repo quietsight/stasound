@@ -1,0 +1,189 @@
+	
+	html {
+		overflow-Y: scroll;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		background-color: #777;
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		color: #333333;
+	}
+	
+	#pcSetupContainer {
+		width: 100%;
+		margin: 30px auto;
+	}
+	
+	#pcSetup {
+		background-color: #FFFFFF;
+		margin-left: auto;
+		margin-right: auto;
+		width: 610px;
+		padding: 30px;
+		border: 1px solid #555;
+	}
+
+	#pcSetup h1 {
+		font-size: 16px;
+		font-weight: bold;
+		margin: 5px 0 5px 0;
+		padding: 5px;
+		border-bottom: 1px dashed #CCC;
+	}
+	
+	#pcSetup a:link, a:visited {
+		color: #0066FF;
+	}
+	
+	#pcSetup a:hover {
+		color: #0000FF;
+		text-decoration: none;
+	}
+
+	.pcSetupTable {
+		text-align: left;
+		border: 1px solid #E1E1E1;
+		background-image: url(pcBoxBack.png);
+		background-repeat: repeat-x;
+		margin-top: 10px;
+		padding: 5px;
+		width: 100%;
+	}
+		
+	.pcSetupTable td {
+		padding: 5px;
+	}
+	
+	.pcSetupTable li {
+		padding-bottom: 10px;
+	}
+		
+	#pcSetup form {
+		margin: 0;
+		}
+		
+	.pcForms input {
+		border: 1px solid #CCCCCC;
+		background-color: #F7F7F7;
+		font-size: 11px;
+		color:#666666;
+		padding: 2px 3px 2px 3px;
+	}
+	
+	.pcForms input:focus {
+		border: 1px solid #999999;
+		background-color: #FFFFCC;
+	}
+	
+	.pcForms textarea {
+		border: 1px solid #CCCCCC;
+		background-color: #F7F7F7;
+		font-size: 11px;
+		color:#666666;
+		padding: 2px 3px 2px 3px;
+	}
+	
+	.pcForms textarea:focus {
+		border: 1px solid #999999;
+		background-color: #FFFFCC;
+	}
+	
+	/* Style drop-down menus */
+	.pcForms select {
+		font-size: 10px;
+		color: #333333;
+		background-color: #F5F5F5;
+		border: 1px solid #CCCCCC;
+	}
+	
+	/* Style submit image button */
+	#submit {
+		border: 0;
+		background-color: transparent;
+		padding: 0px;
+	}
+	/* Style submit image button */
+	#pcSetup .submit {
+		border: 0;
+		background-color: transparent;
+		padding: 0px;
+	}
+	
+	/* Style submit button (when an image is NOT used) */
+	#pcSetup .submit2 {
+		border: 1px solid #CCCCCC;
+		background-image: url(pcFormButtonBack2.png);
+		font-size: 12px;
+		color:#555;
+		padding: 4px 8px;
+	}
+	
+	/* Style button outside a form */
+	#pcSetup .ibtnGrey {
+		border: 1px solid #CCCCCC;
+		background-image: url(pcFormButtonBack.png);
+		font-size: 12px;
+		color:#666;
+		padding: 4px 8px;
+	}
+	
+	/* Style the transparent fields used by ProductCart Build To Order and Apparel Add-on */
+	#pcSetup .transparentField {
+		border: 0;
+		background-color: transparent;
+	}	
+	
+	/* Clear border on checkboxes to fix IE bug */
+	#pcSetup .clearBorder {
+		border: 0;
+		background-color: transparent;
+	}	
+	
+	/* Horizontal line */
+	hr {
+	color: #e5e5e5;
+	background: #e5e5e5;
+	border: 0;
+	height: 1px;
+	}
+	
+	#pcSetupCopyright {
+		font-size: 12px;
+		margin: 10px 0;
+	}
+	
+	.pcCPmessageInfo {
+		width: 90%;
+		background-color: #EDF0F4;
+		border: 1px solid  #CCC;
+		background-image:url(pcv4_icon_info.gif);
+		background-repeat: no-repeat;
+		background-position: 8px 8px;
+		margin: 15px 0;
+		padding: 10px 10px 10px 50px;
+		text-align: left;
+		color: #666;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+	
+	.pcCPmessage {
+		width: 90%;
+		background-color: #FF9;
+		border: 1px solid #FC0;
+		background-image:url(pcv4_icon_alert.gif);
+		background-repeat: no-repeat;
+		background-position: 8px 4px;
+		margin: 15px 0;
+		padding: 15px 10px 15px 50px;
+		color: #000000;
+		font-size: 14px;
+		text-align: left;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}

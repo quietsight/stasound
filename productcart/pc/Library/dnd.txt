@@ -1,0 +1,1 @@
+Do not remove this folder. It is used by the built-in Help Desk.

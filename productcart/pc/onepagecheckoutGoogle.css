@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+input.error { 
+	color: #CC3333;
+	border: 1px solid #CC3333;
+	background-color: #FF9F9F;
+}
+label.error {
+	background: url('images/unchecked.gif') no-repeat 0px 0px;
+	display:block;
+	position:relative;
+	padding-left: 16px;
+	margin-left: .3em;
+}
+label.valid {
+	display: none;
+}

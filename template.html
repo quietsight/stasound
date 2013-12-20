@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<!--#include file="include-metatags.asp"-->
+<html>
+<head>
+<%Session.LCID = 1033
+if pcv_PageName<>"" then%>
+<title><%=pcv_PageName%></title>
+<%end if%>
+<%GenerateMetaTags()%>
+<%Response.Buffer=True%> 
+<%
+Set conlayout=Server.CreateObject("ADODB.Connection")
+conlayout.Open scDSN
+Set RSlayout = conlayout.Execute("Select * From layout Where layout.ID=2")
+Set rsIconObj = conlayout.Execute("Select * From icons WHERE id=1")
+%>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link type="text/css" rel="stylesheet" href="pcHeaderFooter11.css" />
+<link type="text/css" rel="stylesheet" href="pcStorefront.css" />
+<link type="text/css" rel="stylesheet" href="pcBTO.css" />
+<!--#include file="inc_header.asp" -->
+</head>
+<body>
+<!-- HEADER -->
+	<div class="wrapper">	
+		<div id="header">	
+			<a href="index.html" />
+				<div class="logo">
+
+				</div>
+			</a>
+
+<div class="clear"></div>
+
+		</div><!--header-->
+
+<!-- NAV -->	
+		<div class="nav">
+			<div class="navblock">
+				<p>
+					Superior Products for 
+					<a href="index.html#dogsection" class="navlink">DOGS</a> |
+					<a href="index.html#catsection" class="navlink">CATS</a> |
+					<a href="index.html#horsesection" class="navlink">HORSES</a> |
+					<a href="index.html#livestocksection" class="navlink">LIVESTOCK SHOW ANIMALS</a>
+				</p>
+			</div><!--navblock-->
+		</div><!--nav-->
+
+<!-- MAINCONTENT -->
+
+		<div class="shadowtop"></div>
+
+		<div id="maincontent">
+			<div class="contentblock">
+				
+<!-- ********** 
+
+CONTENT GOES HERE 
+
+********** -->
+
+<!--CLEAR--><div class="clear"></div>
+
+			</div><!--contentblock-->
+		</div><!--maincontent-->
+
+		<div class="shadowbottom"></div>
+<div class="push"></div>
+	</div><!-- wrapper -->	
+
+<!-- FOOTER -->
+	<div id="footer">
+		<div class="footerblock">
+
+			<div class="footeritem footerlogo">
+				<a href="index.html"><img src="images/website/sslogo.png" onmouseover="this.src='images/website/sslogo-hover.png'" onmouseout="this.src='images/website/sslogo.png'" /></a>
+			</div><!-- footerlogo-->
+
+			<div class="footeritem footerinfo">
+				<p>
+					4301 Will Rogers Pkwy, Ste 1000<br>
+					Oklahoma City, OK 73108<br>
+					toll free: 
+						<a href="tel:+18773997545">(877) 399-7545</a><br>
+					fax: 
+						<a href="tel:+14059483153">(405) 948-3153</a>
+				</p>			
+			</div><!--footerinfo-->
+
+			<div class="footeritem footericons">
+				<p>
+					<a href="https://twitter.com/stasound"><img src="images/website/twitter.png" /> Follow Us On Twitter</a>
+				<br>
+					<a href="mailto:sales@stasound.com"><img src="images/website/email.png" /> sales@stasound.com</a>
+				</p>			
+			</div><!--footericons-->
+
+			<div class="footeritem footerlinks">
+				<ul>
+					<a href="index.html#dogsection"><li>Dogs</li></a>
+					<a href="index.html#catsection"><li>Cats</li></a>
+					<a href="index.html#horsesection"><li>Horses</li></a>
+					<a href="index.html#livestocksection"><li>Livestock</li></a>
+				</ul>		
+			</div><!--footerlinks-->
+
+
+		</div><!--footerblock-->
+	</div><!--footer-->
+
+<!-- LIVERELOAD -->
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+<!--#include file="inc_footer.asp" -->
+</body>
+</html>

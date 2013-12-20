@@ -1,0 +1,29 @@
+<SOAP-ENV:Envelope
+	xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance"
+	xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/1999/XMLSchema"
+	SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+	<SOAP-ENV:Header>
+		<RequesterCredentials xmlns="urn:ebay:api:PayPalAPI" SOAP-ENV:mustUnderstand="1">
+         <Credentials xmlns="urn:ebay:apis:eBLBaseComponents">
+							<Username>Username</Username>
+							<Password>Password</Password>
+            <Subject/>
+         </Credentials>
+      </RequesterCredentials>
+   </SOAP-ENV:Header>
+   <SOAP-ENV:Body>
+      <SetExpressCheckoutReq xmlns="urn:ebay:api:PayPalAPI">
+         <SetExpressCheckoutRequest xsi:type="ns:SetExpressCheckoutRequestType">
+            <Version xmlns="urn:ebay:apis:eBLBaseComponents" xsi:type="xsd:string">1.0</Version>
+            <SetExpressCheckoutRequestDetails xmlns="urn:ebay:apis:eBLBaseComponents">
+               <OrderTotal xmlns="urn:ebay:apis:eBLBaseComponents" currencyID="USD" xsi:type="cc:BasicAmountType">OrderTotal</OrderTotal>
+               <ReturnURL xsi:type="xsd:string">ReturnURL</ReturnURL>
+               <CancelURL xsi:type="xsd:string">CancelURL</CancelURL>
+							 <PaymentAction>PaymentAction</PaymentAction>
+            </SetExpressCheckoutRequestDetails>
+         </SetExpressCheckoutRequest>
+      </SetExpressCheckoutReq>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

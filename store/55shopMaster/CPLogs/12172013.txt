@@ -1,0 +1,90 @@
+0,,,,98.175.170.231,81531880,12/17/2013,11:50:23 AM,http://stasound.com/store/setup/step3.asp,login_1.asp
+
+0,,,,98.175.170.231,81531880,12/17/2013,11:50:32 AM,http://stasound.com/store/55shopMaster/login_1.asp,login_1.asp
+
+0,,,,98.175.170.231,81531880,12/17/2013,11:50:32 AM,http://stasound.com/store/55shopMaster/login_1.asp,login_1.asp
+
+0,,,,98.175.170.231,81531880,12/17/2013,11:50:46 AM,http://stasound.com/store/55shopMaster/login_1.asp,login_1.asp
+
+0,,,,98.175.170.231,81531880,12/17/2013,11:50:46 AM,http://stasound.com/store/55shopMaster/login_1.asp,login.asp?Submit=Submit&idadmin=11874&password=%A7%9A%9B%A0%A5%97%9C%95&submitf=1&
+
+-1,1,11874,19,98.175.170.231,81531880,12/17/2013,11:50:46 AM,http://stasound.com/store/55shopMaster/login_1.asp,menu.asp
+
+-1,1,11874,19,98.175.170.231,81531880,12/17/2013,11:50:47 AM,http://stasound.com/store/55shopMaster/login_1.asp,AdminSettings.asp?tab=1
+
+-1,1,11874,19,98.175.170.231,81531880,12/17/2013,11:51:51 AM,http://stasound.com/store/55shopMaster/AdminSettings.asp?tab=1,imageuploada_popup.asp
+
+-1,1,11874,19,98.175.170.231,81531880,12/17/2013,11:52:54 AM,http://stasound.com/store/55shopMaster/imageuploada_popup.asp,imageupl_popup.asp
+
+-1,1,11874,19,98.175.170.231,81531880,12/17/2013,11:52:56 AM,http://stasound.com/store/55shopMaster/imageuploada_popup.asp,imageupl_popup_confirm.asp?fn=stasound_logo.png
+
+-1,1,11874,19,98.175.170.231,81531880,12/17/2013,11:55:31 AM,http://stasound.com/store/55shopMaster/AdminSettings.asp?tab=1,AdminSettings.asp
+
+,,,,98.175.170.231,93133863,12/17/2013,1:18:41 PM,http://stasound.com/store/55shopMaster/AdminSettings.asp,AdminSettingsSSL.asp
+
+,,,,98.175.170.231,93133863,12/17/2013,1:18:41 PM,http://stasound.com/store/55shopMaster/AdminSettings.asp,login_1.asp?RedirectURL=AdminSettingsSSL%2Easp
+
+,,,,98.175.170.231,96042570,12/17/2013,1:42:23 PM,http://stasound.com/store/55shopMaster/AdminSettings.asp,AdminSettings.asp
+
+,,,,98.175.170.231,96042570,12/17/2013,1:42:23 PM,http://stasound.com/store/55shopMaster/AdminSettings.asp,login_1.asp?RedirectURL=AdminSettings%2Easp
+
+,,,,98.175.170.231,96042570,12/17/2013,1:42:28 PM,http://stasound.com/store/55shopMaster/login_1.asp?RedirectURL=AdminSettings%2Easp,login_1.asp?RedirectURL=AdminSettings%2Easp
+
+,,,,98.175.170.231,96042570,12/17/2013,1:42:29 PM,http://stasound.com/store/55shopMaster/login_1.asp?RedirectURL=AdminSettings%2Easp,login.asp?idadmin=Provider%3Dsqloledb%3B+Data+Source%3Dssshop%2Edb%2E9699384%2Ehostedresource%2Ecom%3B+Initial+Catalog%3Dssshop%3B+User+ID%3Dssshop%3B+Password%3D%27Pavel7722%25%27%3B&password=%A7%9A%9B%A0%A5%97%9C%95&submitf=1&Submit=Submit&
+
+,,,,98.175.170.231,96042570,12/17/2013,1:42:37 PM,http://stasound.com/store/55shopMaster/login_1.asp?RedirectURL=AdminSettings%2Easp,login_1.asp?RedirectURL=AdminSettings%2Easp
+
+,,,,98.175.170.231,96042570,12/17/2013,1:42:38 PM,http://stasound.com/store/55shopMaster/login_1.asp?RedirectURL=AdminSettings%2Easp,login.asp?idadmin=11874&password=%A7%9A%9B%A0%A5%97%9C%95&submitf=1&Submit=Submit&
+
+-1,1,11874,19,98.175.170.231,96042570,12/17/2013,1:42:38 PM,http://stasound.com/store/55shopMaster/login_1.asp?RedirectURL=AdminSettings%2Easp,AdminSettings.asp
+
+-1,1,11874,19,98.175.170.231,96042570,12/17/2013,1:46:41 PM,http://stasound.com/store/55shopMaster/AdminSettings.asp,manageHomePage.asp
+
+,,,,98.175.170.231,99464095,12/17/2013,2:16:00 PM,http://stasound.com/store/55shopMaster/AdminSettings.asp,AdminSettings.asp
+
+,,,,98.175.170.231,99464095,12/17/2013,2:16:00 PM,http://stasound.com/store/55shopMaster/AdminSettings.asp,login_1.asp?RedirectURL=AdminSettings%2Easp
+
+,,,,98.175.170.231,99464095,12/17/2013,2:16:08 PM,http://stasound.com/store/55shopMaster/login_1.asp?RedirectURL=AdminSettings%2Easp,login_1.asp?RedirectURL=AdminSettings%2Easp
+
+,,,,98.175.170.231,99464095,12/17/2013,2:16:08 PM,http://stasound.com/store/55shopMaster/login_1.asp?RedirectURL=AdminSettings%2Easp,login.asp?Submit=Submit&idadmin=11874&password=%A7%9A%9B%A0%A5%97%9C%95&submitf=1&
+
+-1,1,11874,19,98.175.170.231,99464095,12/17/2013,2:16:08 PM,http://stasound.com/store/55shopMaster/login_1.asp?RedirectURL=AdminSettings%2Easp,AdminSettings.asp
+
+-1,1,11874,19,98.175.170.231,99464095,12/17/2013,2:16:15 PM,http://stasound.com/store/55shopMaster/AdminSettings.asp,AdminSettings.asp
+
+-1,1,11874,19,98.175.170.231,99464095,12/17/2013,2:16:57 PM,http://stasound.com/store/55shopMaster/AdminSettings.asp,AdminSettings.asp
+
+-1,1,11874,19,98.175.170.231,99464095,12/17/2013,2:18:49 PM,http://stasound.com/store/55shopMaster/AdminSettings.asp,AdminSettings.asp
+
+-1,1,11874,19,98.175.170.231,99464095,12/17/2013,2:21:23 PM,http://stasound.com/store/55shopMaster/AdminSettings.asp,AdminSettings.asp
+
+,,,,98.175.170.231,102364581,12/17/2013,2:33:48 PM,http://stasound.com/store/55shopMaster/AdminSettings.asp,addProduct.asp?prdType=std
+
+,,,,98.175.170.231,102364581,12/17/2013,2:33:49 PM,http://stasound.com/store/55shopMaster/AdminSettings.asp,login_1.asp?RedirectURL=addProduct%2Easp%3FprdType%3Dstd
+
+,,,,98.175.170.231,102364581,12/17/2013,2:33:59 PM,http://stasound.com/store/55shopMaster/login_1.asp?RedirectURL=addProduct%2Easp%3FprdType%3Dstd,login_1.asp?RedirectURL=addProduct%2Easp%3FprdType%3Dstd
+
+,,,,98.175.170.231,102364581,12/17/2013,2:33:59 PM,http://stasound.com/store/55shopMaster/login_1.asp?RedirectURL=addProduct%2Easp%3FprdType%3Dstd,login.asp?Submit=Submit&idadmin=11874&password=%A7%9A%9B%A0%A5%97%9C%95&submitf=1&
+
+-1,1,11874,19,98.175.170.231,102364581,12/17/2013,2:33:59 PM,http://stasound.com/store/55shopMaster/login_1.asp?RedirectURL=addProduct%2Easp%3FprdType%3Dstd,addProduct.asp?prdType=std
+
+-1,1,11874,19,98.175.170.231,102364581,12/17/2013,2:33:59 PM,http://stasound.com/store/55shopMaster/login_1.asp?RedirectURL=addProduct%2Easp%3FprdType%3Dstd,addProduct.asp?catCnt=100&prdType=std
+
+-1,1,11874,19,98.175.170.231,102364581,12/17/2013,2:34:11 PM,http://stasound.com/store/55shopMaster/addProduct.asp?catCnt=100&prdType=std,pcSpryAddCatAction.asp
+
+-1,1,11874,19,98.175.170.231,102364581,12/17/2013,2:34:17 PM,http://stasound.com/store/55shopMaster/addProduct.asp?catCnt=100&prdType=std,pcSpryAddCatAction.asp
+
+-1,1,11874,19,98.175.170.231,102364581,12/17/2013,2:34:22 PM,http://stasound.com/store/55shopMaster/addProduct.asp?catCnt=100&prdType=std,pcSpryAddCatAction.asp
+
+-1,1,11874,19,98.175.170.231,102364581,12/17/2013,2:34:29 PM,http://stasound.com/store/55shopMaster/addProduct.asp?catCnt=100&prdType=std,pcSpryAddCatAction.asp
+
+,,,,98.175.170.231,110549154,12/17/2013,3:40:25 PM,http://stasound.com/store/55shopMaster/addProduct.asp?catCnt=100&prdType=std,login_1.asp
+
+,,,,98.175.170.231,110549154,12/17/2013,3:40:34 PM,http://stasound.com/store/55shopMaster/login_1.asp,login_1.asp
+
+,,,,98.175.170.231,110549154,12/17/2013,3:40:34 PM,http://stasound.com/store/55shopMaster/login_1.asp,login.asp?idadmin=11874&password=%A7%9A%9B%A0%A5%97%9C%95&submitf=1&Submit=Submit&
+
+-1,1,11874,19,98.175.170.231,110549154,12/17/2013,3:40:34 PM,http://stasound.com/store/55shopMaster/login_1.asp,menu.asp
+
+-1,1,11874,19,98.175.170.231,110549154,12/17/2013,3:40:35 PM,http://stasound.com/store/55shopMaster/menu.asp,prv_AutoSendEmails.asp
+

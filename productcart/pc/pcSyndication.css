@@ -1,0 +1,57 @@
+/*
+ProductCart Shopping Cart Software, Copyright NetSource Commerce 2006, All Rights Reserved
+Use this stylesheet to change the look of the default header and footer that ship with ProductCart.
+*/
+
+#pcSyndication {
+	font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+	font-size: 11px;
+	color: #CCCCCC;
+	text-align: left;
+	background-color: #F0F7FE;
+	width: 190px;
+	padding: 2px;
+	margin: 2px;
+}
+
+#pcSyndication a:link {
+	color: #0066FF;
+}
+
+#pcSyndication a:visited {
+	color: #0066FF;
+}
+
+#pcSyndication a:hover {
+	color: #0000FF;
+	text-decoration: none;
+}
+
+.pcSyndicationRegion {
+	padding: 0px;
+}
+
+.pcSyndicationRegion img {
+	border: 1px solid #E1E1E1;
+	padding: 2px;
+	height: 42px;
+}
+
+#pcSyndication .pcSyndicationName {
+	font-size: 12px;
+	color: #CC6600;
+}
+
+#pcSyndication .pcSyndicationPrice {
+	font-size: 12px;
+	color:#990000;
+}
+
+#pcSyndication h3 {
+	font-size: 14px;
+	color: #000000;
+}
+
+#pcSyndicationBox {
+	height: 100px
+}

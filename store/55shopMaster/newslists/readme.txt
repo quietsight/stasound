@@ -1,0 +1,1 @@
+Do not delete this directory. It is used to store e-mail lists used by the Newsletter Wizard to send messages to groups of customers. Previously stored lists can be used again to send  a new message to the same list. Please refer to the ProductCart User Guide for more information about this feature.

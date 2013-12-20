@@ -1,0 +1,1 @@
+Do not delete this directory. It is used as a temporary location for the ProductCart Image Upload & Resize utility. This directory hosts the source image when it is uploaded to the server. The source image is then automatically deleted once the utility has finished resizing the images and saving them to the pc/catalog folder.

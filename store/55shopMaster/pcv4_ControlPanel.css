@@ -1,0 +1,764 @@
+/*
+ProductCart Shopping Cart Software, Copyright NetSource Commerce. 2001-2013, All Rights Reserved
+Use this stylesheet to change the look of the default header and footer that ship with ProductCart.
+
+If styles modified using this page do not appear in your Control Panel, please check the following
+two items before anything else:
+
+(1) Make sure that header.asp links to this stylesheet. The code goes before the closing </head> tag:
+
+<link type="text/css" rel="stylesheet" href="pcControlPanel4.css" />
+
+(2) Make sure that header.asp contains the following code at the very top of the page, before anything else.
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+*/
+
+/*-----------------------------------------------------------------------------------------
+	MAIN Styles - They apply to the entire Control Panel
+	----------------------------------------------------------------------------------------*/
+	
+	html {
+		overflow-Y: scroll;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		background-color: #FFFFFF;
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		color: #333333;
+	}
+
+	#pcCPmain {
+		width: 1000px;
+		margin: 0 auto;
+		position: relative;
+	}
+	
+	#pcCPmain h1 {
+		border-bottom: 1px solid #DDD;
+		font-size: 20px;
+		margin: 16px 0 10px 0;
+		padding: 3px 3px 3px 6px;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-weight: normal;
+	}
+	
+	#pcCPmain h2 {
+		border-bottom: 1px dashed #CCC;
+		font-size: 14px;
+		margin-bottom: 10px;
+		padding: 5px 5px 5px 0;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-weight: normal;
+	}
+
+	/* Remove the default border from images */	
+	#pcCPmain img {
+		border: 0;
+	}
+	
+	#pcCPmain p {
+		text-align: left;
+	}
+	
+	#pcCPmain a:link, #pcCPmain a:visited  {
+		color: #00F;
+	}
+	
+		#pcCPmain a:hover  {
+			text-decoration: underline;
+		}
+	
+/*-----------------------------------------------------------------------------------------
+	 Header
+	----------------------------------------------------------------------------------------*/
+	
+	#pcCPheader {
+		width: 1005px;
+		height: 59px;
+	}
+
+	#pcCPversion {
+		position: absolute;
+		right: 0px;
+		top: 34px;
+		font-size: 13px;
+		color: #888;
+	}
+
+	#pcCPstoreName {
+		position: absolute;
+		left: 10px;
+		top: 12px;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		font-size: 32px;
+	}
+		
+	#pcCPheaderNav {
+		position: absolute;
+		right: 0;
+		top: 4px;
+		color: #BBB;
+		padding: 0 12px 3px 0;
+		border-bottom: 1px dashed #CCC;
+		font-size: 12px;
+		}
+		
+		#pcCPheaderNav img {
+			border: none;
+			margin-left: 12px;
+		}
+
+		#pcCPheaderNav a:link, #pcCPheaderNav a:visited  {
+			color:#666;
+			text-decoration: none;
+			}
+			
+		#pcCPheaderNav a:hover  {
+			color: #06C;
+			text-decoration: none;
+			}
+
+	#pcCPtopNav {
+		position: absolute;
+		left: 12px;
+		top: 66px;
+		z-index: 1090;
+		font-size: 12px;
+		}
+
+/*-----------------------------------------------------------------------------------------
+	 Control Panel Main Area
+	----------------------------------------------------------------------------------------*/
+
+	#pcCPmainArea {
+		margin-top: 30px;
+	}
+	
+	#pcCPmainLeft {
+		float: left;
+		width: 800px;
+		min-height: 325px;
+		border-right: none;
+		border-bottom: 1px solid #e1e1e1;
+		padding-bottom: 10px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+	}
+	
+	#pcCPmainRight {
+		position: absolute;
+		left: 0;
+		top: 98px;
+		margin-left: 810px;
+		width: 195px;
+		text-align: center;
+	}
+	
+		#pcCPmainRight .pcCPsearchBox {
+			text-align: left;
+			border: 1px solid #CCC;
+			padding: 6px;
+			margin: 6px 0 12px 5px;
+			background-image: url(images/pcBoxBack.png);
+			background-repeat: repeat-x;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			font-size: 12px;
+		}
+
+		#pcCPmainRight .pcCPsearchBox h1 {
+			text-align: left;
+			font-size: 14px;
+			margin: 5px 0 10px 0;
+			padding: 0;
+		}
+		
+		#pcCPmainRight .pcCPsearchBox p {
+			margin: 0;
+			padding: 5px 0 0 0;
+		}
+		#pcCPmainRight a:link, #pcCPmainRight a:visited  {
+			color: #00F;
+			text-decoration: none;
+		}
+		
+			#pcCPmainRight a:hover  {
+				color: #06F;
+			}
+		
+	/* pcCPcontent is the table that contains most content on the page */
+		
+	#pcCPmain .pcCPcontent {
+			width: 98%;
+			border-collapse: collapse;
+			margin: 0 5px 0 5px;
+			text-align: left;
+		}
+	
+		.pcCPcontent td {
+			padding: 3px;
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			font-size: 13px;
+			color: #333333;
+		}
+		
+		.pcCPcontent td h2 {
+			margin-top: 0px;
+		}
+		
+		/* Remove the default marging from paragraphs */	
+		#pcCPmain .pcCPcontent p {
+			margin: 0 0 0 5px;
+		}
+		
+		.pcCPcontent th {
+			border-bottom: 1px dashed #999;
+			background-color: #f5f5f5;
+			padding: 5px;
+			font-family: Georgia, "Times New Roman", Times, serif;
+			font-size: 14px;
+			font-weight: normal;
+			text-align: left;
+		}
+		
+		.pcCPcontent tr td a {
+			text-decoration: none;
+		}
+
+	/* pcCPcontentCat is the same of pcCPcontent, diffirent: border,spacing,padding,width,margin-left */
+	
+	#pcCPmain .pcCPcontentCat {
+			width: 97%;
+			border-collapse: collapse;
+			margin: 0 0 0 15px;
+			text-align: left;
+		}
+		
+		.pcCPcontentCat th {
+			border: 1px solid #e1e1e1;
+			background-color: #FFFFCC;
+			font-size: 13px;
+			font-weight: bold;
+			padding: 4px;
+		}
+		
+		.pcCPcontentCat tr td a {
+			text-decoration: none;
+		}
+		
+	/* pcCPList is used when listing items within a page */
+		
+		.pcCPList {
+			width: 80%;
+			border: 1px solid #e1e1e1;
+			border-collapse: collapse;
+			margin: 10px;
+			text-align:left;
+		}
+		
+		.pcCPList td {
+			padding: 5px;
+		}
+		
+	/* pcCPsearch is used to contain the page where a search is started */		
+		.pcCPsearch {
+			width: 90%;
+			border-collapse: collapse;
+			background-color: #F5F5F5;
+			margin: 10px;
+		}
+		
+		.pcCPsearch td {
+			padding: 3px;
+		}
+		
+		#totalresults {
+			font-weight: bold;
+			color:#0066FF;
+		}
+		
+		
+		
+	/* pcCPsectionTitle styles section titles on pages with different sections */
+		.pcCPsectionTitle {
+			font-weight: bold;
+			padding-top: 11px;
+			border-bottom: 1px solid #e1e1e1;
+		}
+		
+	/* pcShowProductsL handles the table that shows product info
+	   when products are displayed in a list */
+		 
+		.pcShowProductsL {
+			width: 100%;
+			text-align: left;
+		}
+		
+		.pcShowProductsLheader {
+			text-align: left;
+			background-color:#F7F7F7;
+		}
+		
+		.pcShowProductsLCell {
+			vertical-align: top;
+			text-align: left;
+		}
+		
+		.pcShowProductImageL {
+			height: 25px;
+			width: 25px;
+			text-align: left;
+			padding: 5px 5px 0 5px;
+		}
+		
+	/* pcShowProductsM handles the table that shows product info
+	   when products are displayed in a list with the quantity field */
+		 
+		.pcShowProductsMheader {
+			text-align: left;
+			background-color:#F7F7F7;
+		}
+		
+		.pcShowProductsM {
+			width: 100%;
+			text-align: left;
+			vertical-align: top;
+		}
+		
+		.pcShowProductImageM {
+			height: 25px;
+			width: 25px;
+			text-align: left;
+			padding: 0 5px 0 5px;
+		}
+
+
+	/* Styles within pcPageNav (Page Navigation) */
+
+	#pcCPmain .pcPageNav {
+		text-align: left;
+		margin: 10px 0 10px 5px;
+	}
+	
+	#pcCPmain .pcPageNav a:link, #pcCPmain .pcPageNav a:visited {
+		color: #666;
+		text-decoration: none;
+	}
+	
+	#pcCPmain .pcPageNav a:hover {
+		color: #333;
+		text-decoration: underline;
+	}
+
+/*-----------------------------------------------------------------------------------------
+	 Forms
+	----------------------------------------------------------------------------------------*/
+
+	/* Clear the margins for all forms used by ProductCart */
+	#pcCPmain form {
+		margin: 0;
+		}
+		
+	/* Clear border on checkboxes to fix IE bug */
+	#pcCPmain .clearBorder {
+		border: 0;
+		background-color: transparent;
+	}
+	
+	/* Style the transparent fields used by ProductCart Build To Order and Apparel Add-on */
+	#pcCPmain .transparentField {
+		border: 0;
+		background-color: transparent;
+	}
+		
+	.pcForms input {
+		border: 1px solid #CCCCCC;
+		background-color: #F7F7F7;
+		font-size: 12px;
+		color:#666666;
+		padding: 2px 3px 2px 4px;
+	}
+	
+	.pcForms input:focus {
+		border: 1px solid #999999;
+		background-color: #FFFFCC;
+	}
+	
+	.pcForms textarea {
+		border: 1px solid #CCCCCC;
+		background-color: #F7F7F7;
+		font-size: 12px;
+		color:#666666;
+		padding: 2px 3px 2px 3px;
+	}
+	
+	.pcForms textarea:focus {
+		border: 1px solid #999999;
+		background-color: #FFFFCC;
+	}
+	
+	/* Style drop-down menus */
+	.pcForms select {
+		font-size: 12px;
+		color: #333333;
+		background-color: #F5F5F5;
+		border: 1px solid #CCCCCC;
+	}
+
+	.pcForms fieldset {
+		border: 1px solid #CCCCCC;
+		padding: 0 0 10px 10px;
+	}
+	
+	/* Style submit image button */
+	#submit {
+		border: 0;
+		background-color: transparent;
+		padding: 1px 2px 1px 2px;
+	}
+	
+	/* Style submit button (when an image is NOT used) */
+	#pcCPmain .submit2 {
+		border: 1px solid #CCCCCC;
+		background-image: url(images/pcFormButtonBack2.png);
+		font-size: 12px;
+		color:#555;
+		padding: 4px 8px;
+	}
+	
+	/* Style submit image button on search page */
+	#searchSubmit {
+		border: 1px solid #CCCCCC;
+		background-image: url(images/pcFormButtonBack2.png);
+		font-size: 12px;
+		color:#555;
+		padding: 4px 8px;
+	}
+	
+	/* Style button outside a form */
+	.ibtnGrey {
+		border: 1px solid #CCCCCC;
+		background-image: url(images/pcFormButtonBack.png);
+		font-size: 12px;
+		color:#666;
+		padding: 4px 8px;
+	}
+	
+	#pcCPmain input[type="button"] {
+		border: 1px solid #CCCCCC;
+		background-image: url(images/pcFormButtonBack.png);
+		font-size: 12px;
+		color:#666;
+		padding: 4px 8px;
+	}
+	
+	#pcCPmain input[type="submit"] {
+		border: 1px solid #CCCCCC;
+		background-image: url(images/pcFormButtonBack.png);
+		font-size: 12px;
+		color:#666;
+		padding: 4px 8px;
+	}
+	
+	#pcCPmain input[type="submit"].submit2 {
+		border: 1px solid #CCCCCC;
+		background-image: url(images/pcFormButtonBack2.png);
+		font-size: 12px;
+		color:#555;
+		padding: 4px 8px;
+	}
+	
+	#pcCPmain input[type="button"].submit2 {
+		border: 1px solid #CCCCCC;
+		background-image: url(images/pcFormButtonBack2.png);
+		font-size: 12px;
+		color:#555;
+		padding: 4px 8px;
+	}
+	
+/*-----------------------------------------------------------------------------------------
+	 Other styles
+	----------------------------------------------------------------------------------------*/
+
+	.pcCPmessage {
+		width: 90%;
+		background-color: #FF9;
+		border: 1px solid #FC0;
+		background-image:url(images/pcv4_icon_alert.gif);
+		background-repeat: no-repeat;
+		background-position: 8px 4px;
+		margin: 15px 0;
+		padding: 15px 10px 15px 50px;
+		color: #000000;
+		font-size: 14px;
+		text-align: left;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+	.pcCPmessageSuccess {
+		width: 90%;
+		background-color: #AFA;
+		border: 1px solid  #99F;
+		background-image:url(images/pcv4_icon_success.png);
+		background-repeat: no-repeat;
+		background-position: 8px 8px;
+		margin: 15px 0;
+		padding: 15px 10px 15px 50px;
+		color: #000000;
+		font-size: 14px;
+		text-align: left;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+	.pcCPmessageInfo {
+		width: 90%;
+		background-color: #EDF0F4;
+		border: 1px solid  #CCC;
+		background-image:url(images/pcv4_icon_info.gif);
+		background-repeat: no-repeat;
+		background-position: 8px 8px;
+		margin: 15px 0;
+		padding: 10px 10px 10px 50px;
+		text-align: left;
+		color: #666;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+	}
+
+	#pcCPmain .pcCPshipping {
+		background-color: #FFFFFF;
+		border-bottom: 1px solid #e1e1e1;
+		margin: 5px;
+		padding: 5px;
+	}
+	
+	#pcCPmain .pcCPshipping i {
+		color:#C0C0C0;
+		font-size:10px;
+	}
+
+	.pcCPnotes {
+		background-color:#FFFFCC;
+		color: #666;
+		margin-top: 5px;
+		padding: 3px;
+	}
+	
+	.pcCPnotes li {
+		padding-top: 10px;
+		list-style-type:circle;
+	}
+	
+	.pcSmallText {
+		font-size: 11px;
+		color:#777;
+		}
+		
+	.pcBiggerText {
+		font-size: 12px;
+		}
+
+	/* Sets the height of an empty table row */
+	.pcCPspacer {
+		height: 10px;
+	}
+		
+	/* Site Map Lists */
+	.pcCPsiteMap ul {
+		margin: 0 0 20px 15px;
+		padding: 0;
+	}
+
+		.pcCPsiteMap ul li {
+			font-weight:bold;
+			margin: 5px 0 0 0;
+		}
+		
+		.pcCPsiteMap ul li ul li {
+			font-weight:normal;
+		}
+		
+	/* List using icon */
+	.pcListIcon {
+		list-style-image: url(images/pcIconGo.jpg);
+	}
+
+	#pcFooter {
+		clear: both;
+		padding: 15px 10px 10px 10px;
+		text-align: left;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 10px;
+		}
+	
+	#pcFooter a:link, #pcFooter a:hover, #pcFooter a:visited  {
+		text-decoration: none;
+		color: #666666;
+	}
+		
+	/* Horizontal line */
+	#pcCPmain hr {
+	color: #e5e5e5;
+	background: #e5e5e5;
+	border: 0;
+	height: 1px;
+	}
+	
+	/* Used for page section that contains export icons and links */
+	#pcCPmain .cpOtherLinks {
+		border: 1px dashed #CCC;
+		margin: 10px 0 20px 0;
+		padding: 5px;
+		font-size: 11px;
+		color: #666;
+		background-color:#F7F7F7;
+	}
+	
+	/* Used when there is a repeated list of links (e.g. list of products with action links) */
+	#pcCPmain .cpLinksList a:link, #pcCPmain .cpLinksList a:visited {
+		font-size: 11px;
+		color: #666;
+		text-decoration: none;
+	}
+	
+		#pcCPmain td.cpLinksList a:link, #pcCPmain td.cpLinksList a:visited {
+			color: #666;
+		}
+
+		#pcCPmain .cpLinksList a:hover, #pcCPmain td.cpLinksList a:hover {
+			color: #06C;
+			text-decoration: underline;
+		}
+		
+	/* Change table row background onMouseOver */
+	#pcCPmain .activeRow {
+		background-color: #f3f3f3;
+		border-bottom: 1px solid #f3f3f3;
+	}
+	
+		#pcCPmain .activeRow a:hover {
+			text-decoration: none;
+		}
+
+	#pcCPmain .activeRow2 {
+		background-color: #FFF;
+	}
+	
+	#pcCPmain .inactiveRow {
+		background-color: transparent;
+	}
+	
+	#pcCPmain .pcLinkRow {
+		color: #555;
+		border-bottom: 1px solid #FFF;
+	}
+		
+		#pcCPmain .pcLinkRow a:link, #pcCPmain .pcLinkRow a:visited {
+			color: #555;
+		}
+		
+		#pcCPmain .pcLinkRow a:hover {
+			color: #333;
+			text-decoration: none;
+		}
+	
+	#pcCPmain .cpItemlist {
+		border-bottom: 1px solid #CCC;
+	}
+	
+		#pcCPmain .cpItemlist a:link, #pcCPmain .cpItemlist a:visited {
+			color: #66C;
+		}
+		
+		#pcCPmain .cpItemlist a:link, #pcCPmain .cpItemlist a:visited {
+			color: #66F;
+		}
+		
+	#pcCPmain .pcCProundBox {
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+	}
+	
+/*-----------------------------------------------------------------------------------------
+	 OLD STYLES
+	----------------------------------------------------------------------------------------*/
+	
+	.normal {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		line-height: 14px;
+		color: #000000;
+	}
+	
+	.small {
+		font-size: 11px;
+	}
+
+	.message {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 14px;
+	color: #FF0000;
+	font-weight: bold;
+	}
+	
+	.title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #000000;
+	}
+	
+	.titleShip {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+	}
+	
+	table.invoice {
+		border-collapse:collapse;
+		border: 1px solid #333333;
+		}
+		
+	table.invoiceBto {
+		border-collapse:collapse;
+		border: 0;
+		}
+		
+	td.invoice {
+		border: 1px solid #666666;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 11px;
+		vertical-align: top;
+		}
+		
+	td.invoiceNob {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 11px;
+		vertical-align: top;
+		text-align: left;
+		}
+		
+	td.CustomizeOrdDet {
+		font-family:Verdana, Arial, Helvetica, sans-serif;
+		font-size:11px;
+		vertical-align:top;
+		text-align:right;
+	}
+
+/* END */

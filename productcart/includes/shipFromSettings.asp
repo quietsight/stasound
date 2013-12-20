@@ -1,0 +1,10 @@
+<%private const scShipFromName=""
+private const scShipFromAddress1=""
+private const scShipFromAddress2=""
+private const scShipFromAddress3=""
+private const scShipFromCity=""
+private const scShipFromState=""
+private const scShipFromPostalCode=""
+private const scAlwAltShipAddress=""
+private const scShipFromPostalCountry=""
+%>

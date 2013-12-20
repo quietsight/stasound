@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+/* SpryTabbedPanels.css - Revision: Spry Preview Release 1.4 */
+
+/* Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. */
+
+/* This is the selector for the TabGroup. The TabGroup container houses
+ * all of the tab buttons for each tabbed panel in the widget. This container
+ * does not contribute anything visually to the look of the widget for our
+ * default style.
+ */
+.VTabbedPanels {
+	margin-top: 15px;
+	margin-left: 6px;
+}
+
+.VTabbedPanels .TabbedPanelsTabGroup {
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 160px;
+	height: auto;
+	background-color: #FFF;
+	border-top: solid 1px #CCC;
+	font-family: Arial, sans-serif;
+	font-size: 11px;
+	color: #333333;
+}
+
+/* This is the selector for the TabbedPanelsTab. This container houses
+ * the title for the panel. This is also the tab "button" that the user clicks
+ * on to activate the corresponding content panel so that it appears on top
+ * of the other tabbed panels contained in the widget.
+ *
+ */
+
+.VTabbedPanels .TabbedPanelsTab {
+	position: relative;
+	float: none;
+	left: 1px;
+	margin: 0px;
+	padding: 5px;
+	border-top: none;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #CCC;
+	background-color: #F5F5F5;
+	list-style: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+}
+
+.VTabbedPanels ul.TabbedPanelsTabGroup {
+	margin: 0px !important;
+	padding: 0px !important;
+}
+.VTabbedPanels li.TabbedPanelsTab {
+	margin: 0 !important;
+}
+
+.VTabbedPanels li.TabbedPanelsTabButtons {
+	position: relative;
+	float: none;
+	left: 1px;
+	margin: 10px 0 0 0 !important;
+	padding: 7px;
+	border-top: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #CCC;
+	background-color: #F5F5F5;
+	list-style: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	cursor: pointer;
+}
+
+
+/* This selector is an example of how to change the appearnce of a tab button
+ * container as the mouse enters it. The class "TabbedPanelsTabHover" is
+ * programatically added and removed from the tab element as the mouse enters
+ * and exits the container.
+ */
+.TabbedPanelsTabHover {
+	background-color: #CCC !important;
+	border-right: 5px solid #999 !important;
+}
+
+/* This selector is an example of how to change the appearance of a tab button
+ * container after the user has clicked on it to activate a content panel.
+ * The class "TabbedPanelsTabSelected" is programatically added and removed
+ * from the tab element as the user clicks on the tab button containers in
+ * the widget.
+ *
+ * As mentioned above, for our default style, tab buttons are positioned
+ * 1 pixel down from where it would normally render. When the tab button is
+ * selected, we change its bottom border to match the background color of the
+ * content panel so that it looks like the tab is part of the content panel.
+ */
+.TabbedPanelsTabSelected {
+	background-color: #FFF !important;
+	border-right: 1px solid #FFF !important;
+	font-weight: bold;
+}
+
+/* This selector is an example of how to make a link inside of a tab button
+ * look like normal text. Users may want to use links inside of a tab button
+ * so that when it gets focus, the text *inside* the tab button gets a focus
+ * ring around it, instead of the focus ring around the entire tab.
+ */
+.TabbedPanelsTab a {
+	color: black;
+	text-decoration: none;
+}
+
+/* This is the selector for the ContentGroup. The ContentGroup container houses
+ * all of the content panels for each tabbed panel in the widget.
+ */
+.TabbedPanelsContentGroup {
+	clear: both;
+	background-color: #FFF;
+}
+
+/* This is the selector for the Content panel. The Content panel holds the
+ * content for a single tabbed panel. This container  provides some padding, 
+ * so that the content is not pushed up against the widget borders.
+ */
+.TabbedPanelsContent {
+	padding: 4px 10px 10px 10px;
+}
+
+/* This selector is an example of how to change the appearnce of the currently
+ * active container panel. The class "TabbedPanelsContentVisible" is
+ * programatically added and removed from the content element as the panel
+ * is activated/deactivated.
+ */
+.TabbedPanelsContentVisible {
+}
+
+
+.VTabbedPanels .TabbedPanelsTabSelected {
+	background-color: #EEE;
+	border-bottom: solid 1px #999;
+}
+
+/* This selector floats the content panels for the widget so that they
+ * render to the right of the tabbed buttons.
+ */
+.VTabbedPanels .TabbedPanelsContentGroup {
+	clear: none;
+	float: left;
+	padding: 0px;
+	width: 620px;
+	height: auto;
+	border-top: solid 1px #CCC;
+	border-left: solid 1px #CCC;
+	border-bottom: dashed 1px #CCC;
+	border-right: dashed 1px #CCC;
+}

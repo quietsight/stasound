@@ -1,0 +1,42 @@
+<%
+'// Determine order processing and payment status and load corresponding icons
+	select case porderstatus
+	case "1"
+	  response.Write "<img src=""images/purpledot.gif"" alt=""Incomplete"">"
+	case "2"
+	  response.write "<img src=""images/bluedot.gif"" alt=""Pending"">" 
+	case "3"
+	  response.write "<img src=""images/yellowdot.gif"" alt=""Processed"">" 
+	case "4"
+	  response.write "<img src=""images/greendot.gif"" alt=""Shipped"">" 
+	case "5"
+	  response.write "<img src=""images/reddot.gif"" alt=""Canceled"">" 
+	case "6"
+	  response.write "<img src=""images/orangedot.gif"" alt=""Return"">" 
+	case "7"
+	  response.write "<img src=""images/7dot.gif"" alt=""Partially Shipped"">"
+	case "8"
+	  response.write "<img src=""images/8dot.gif"" alt=""Shipping"">"
+	case "9"
+	  response.write "<img src=""images/9dot.gif"" alt=""Partially Return"">"
+	case "10"
+	  response.write "<img src=""images/greendot.gif"" alt=""Delivered"">" 
+	case "11"
+	  response.write "<img src=""images/reddot.gif"" alt=""Will Not Deliver"">" 
+	case "12"
+	  response.write "<img src=""images/greendot.gif"" alt=""Archived"">"
+	end select
+	response.write "&nbsp;"
+	select case pcv_PaymentStatus
+	case "0"
+	  response.write "<img src=""images/blueflag.gif"" width=""15"" height=""13"" alt=""Pending"">" 
+	case "1"
+	  response.write "<img src=""images/yellowflag.gif"" width=""15"" height=""13"" alt=""Authorized"">" 
+	case "2"
+	  response.write "<img src=""images/greenflag.gif"" width=""15"" height=""13"" alt=""Paid"">" 
+	case "6"
+	  response.write "<img src=""images/darkgreenflag.gif"" width=""15"" height=""13"" alt=""Refunded"">" 
+	case "8"
+	  response.write "<img src=""images/redflag.gif"" width=""15"" height=""13"" alt=""Voided"">" 
+	end select
+%>

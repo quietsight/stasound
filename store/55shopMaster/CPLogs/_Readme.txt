@@ -1,0 +1,1 @@
+This folder saves all the Control Panel access logs.

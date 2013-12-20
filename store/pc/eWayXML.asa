@@ -1,0 +1,401 @@
+<% function replacecomma(pricenumber)
+	if scDecSign="," then
+		replacecomma=replace(pricenumber,".","")
+		replacecomma=replace(replacecomma,",",".")
+	else
+		replacecomma=replace(pricenumber,",","")
+	end if
+end function
+
+Class EPayment
+	Private xmlDoc
+	Private xmlHTTP
+	Private xmlDocNode
+	Private m_XMLFromForm
+	Private m_ewayURL
+
+	Private m_ewayCustomerID
+	Private m_ewayTotalAmount
+	Private m_ewayCustomerFirstName
+	Private m_ewayCustomerLastName
+	Private m_ewayCustomerEmail
+	Private m_ewayCustomerAddress
+	Private m_ewayCustomerPostcode
+	Private m_ewayCustomerInvoiceDescription
+	Private m_ewayCustomerInvoiceRef
+	Private m_ewayCardHoldersName
+	Private m_ewayCardNumber
+	Private m_ewayCardExpiryMonth
+	Private m_ewayCardExpiryYear
+	Private m_ewayTrxnNumber
+	Private m_ewayOption1
+	Private m_ewayOption2
+	Private m_ewayOption3
+
+	Private m_ResultEwayTrxnStatus
+	Private m_ResultEwayTrxnNumber
+	Private m_ResultEwayTrxnOption1
+	Private m_ResultEwayTrxnOption2
+	Private m_ResultEwayTrxnOption3
+	Private m_ResultEwayTrxnReference
+	Private m_ResultEwayTrxnError
+	Private m_ResultEwayAuthCode 
+	Private m_ResultEwayReturnAmount
+	Private m_Error
+	Private m_ErrorMessage
+
+	Public Function DoPayment()
+	    
+	    m_Error = 0
+	    m_ErrorString = ""
+	    DoPayment = False
+	    
+	    ' Select Form or Parameter data (Form puts the data into the parameters)
+	    If XMLFromForm Then
+	        ' Use form data
+	        m_ewayCustomerID = Request.Form("ewaycustomerid")
+					if m_ewayCustomerID="87654321" then
+						 m_ewayTotalAmount = "0.01"
+					else
+						m_ewayTotalAmount = Request.Form("orderTotal")
+					end if
+
+					m_ewayTotalAmount = replacecomma(m_ewayTotalAmount)
+					m_ewayTotalAmount = (m_ewayTotalAmount*100)
+	        
+	        m_ewayCustomerFirstName = Request.Form("ewaycustomerfirstname")
+	        m_ewayCustomerLastName = Request.Form("ewaycustomerlastname")
+	        m_ewayCustomerEmail = Request.Form("ewaycustomeremail")
+	        m_ewayCustomerAddress = Request.Form("ewaycustomeraddress")
+	        m_ewayCustomerPostcode = Request.Form("ewaycustomerpostcode")
+	        m_ewayCustomerInvoiceDescription = Request.Form("ewaycustomerinvoicedescription")
+	        m_ewayCustomerInvoiceRef = Request.Form("ewaycustomerinvoiceref")
+	        m_ewayCardHoldersName = Request.Form("ewaycardholdersname")
+					if m_ewayCustomerID="87654321" then
+						 m_ewayCardNumber ="4646464646464646"
+					else
+	        	m_ewayCardNumber = Request.Form("ewaycardnumber")
+					end if
+	        m_ewayCardExpiryMonth = Request.Form("ewaycardexpirymonth")
+	        m_ewayCardExpiryYear = Request.Form("ewaycardexpiryyear")
+	        m_ewayTrxnNumber = Request.Form("ewaytrxnnumber")
+	        m_ewayOption1 = Request.Form("ewayoption1")
+	        m_ewayOption2 = Request.Form("ewayoption2")
+	        m_ewayOption3 = Request.Form("ewayoption3")
+	    End If
+	    
+	    Set xmlDoc = Server.CreateObject("MSXML2.DOMDocument")
+
+	    Set xmlDoc.documentElement = XMLCreateNode(xmlDoc, xmlDoc, "ewaygateway", "")
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayCustomerID", m_ewayCustomerID)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayTotalAmount", CStr(Int(m_ewayTotalAmount)))
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayCustomerFirstName", m_ewayCustomerFirstName)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayCustomerLastName", m_ewayCustomerLastName)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayCustomerEmail", m_ewayCustomerEmail)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayCustomerAddress", m_ewayCustomerAddress)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayCustomerPostcode", m_ewayCustomerPostcode)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayCustomerInvoiceDescription", m_ewayCustomerInvoiceDescription)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayCustomerInvoiceRef", m_ewayCustomerInvoiceRef)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayCardHoldersName", m_ewayCardHoldersName)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayCardNumber", m_ewayCardNumber)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayCardExpiryMonth", m_ewayCardExpiryMonth)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayCardExpiryYear", m_ewayCardExpiryYear)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayTrxnNumber", m_ewayTrxnNumber)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayOption1", m_ewayOption1)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayOption2", m_ewayOption2)
+	    Set xmlDocNode = XMLCreateNode(xmlDoc, xmlDoc.documentElement, "ewayOption3", m_ewayOption3)
+	    
+	    On Error Resume Next
+	    ' For XML version 3.0
+	    Set xmlHTTP = Server.CreateObject("MSXML2.ServerXMLHTTP")
+	    ' Check if object created
+	    If Err then
+			' Didn't create it so try version 2 (This object olso in version 3)
+			Set xmlHTTP = Server.CreateObject("MSXML2.XMLHTTP")
+			' Fail application because all failed to create
+			If Err Then
+				m_Error = Err.Number
+				m_ErrorMessage = Err.Description
+				On Error GoTo 0
+				Set xmlDoc = Nothing
+				Exit Function
+			End If
+		Else
+			xmlHTTP.setTimeouts 120000, 120000, 120000, 120000
+		End If
+		
+	    ' Send the xml to the server
+	    xmlHTTP.open "POST", m_ewayURL, False
+	    xmlHTTP.send xmlDoc
+	    
+	    ' An error occurred so exit
+	    If Err.Number <> 0 Then
+	        m_Error = Err.Number
+	        m_ErrorMessage = Err.Description
+	        On Error GoTo 0
+	        Set xmlDoc = Nothing
+	        Set xmlHTTP = Nothing
+	        Exit Function
+	    End If
+	    On Error GoTo 0
+	    
+	    xmlDoc.async = False
+	    If xmlDoc.loadXML(xmlHTTP.responseText) Then
+	        ' Get the results
+	        m_ResultEwayTrxnStatus = xmlDoc.documentElement.selectSingleNode("/ewayResponse/ewayTrxnStatus").Text
+	        m_ResultEwayTrxnNumber = xmlDoc.documentElement.selectSingleNode("/ewayResponse/ewayTrxnNumber").Text
+	        m_ResultEwayTrxnOption1 = xmlDoc.documentElement.selectSingleNode("/ewayResponse/ewayTrxnOption1").Text
+	        m_ResultEwayTrxnOption2 = xmlDoc.documentElement.selectSingleNode("/ewayResponse/ewayTrxnOption2").Text
+	        m_ResultEwayTrxnOption3 = xmlDoc.documentElement.selectSingleNode("/ewayResponse/ewayTrxnOption3").Text
+	        m_ResultEwayTrxnReference = xmlDoc.documentElement.selectSingleNode("/ewayResponse/ewayTrxnReference").Text
+	        m_ResultEwayAuthCode = xmlDoc.documentElement.selectSingleNode("/ewayResponse/ewayAuthCode ").Text
+		m_ResultEwayReturnAmount = xmlDoc.documentElement.selectSingleNode("/ewayResponse/ewayReturnAmount ").Text
+		m_ResultEwayTrxnError = xmlDoc.documentElement.selectSingleNode("/ewayResponse/ewayTrxnError").Text
+
+
+
+	        ' Payment process has completed
+	        DoPayment = True
+	    Else
+	        On Error Resume Next
+	        Err.Raise 50000, "Eway", "Failed to process response"
+	        m_Error = 50000
+	        m_ErrorMessage = "Failed to process response"
+	        On Error GoTo 0
+	    End If
+	    
+	    Set objNodeList = Nothing
+	    Set xmlHTTP = Nothing
+	    Set xmlDoc = Nothing
+
+	End Function
+
+	Private Function XMLCreateNode(ByRef oXMLDoc, ByRef oXMLParentNode, ByVal NewNodeName, ByVal NewNodeText)
+	  'create the new XML Node, append to parent
+	  Set oXMLNewNode = oXMLDoc.createElement(NewNodeName)
+	  oXMLParentNode.appendChild (oXMLNewNode)
+	  
+	  'add the text to the node
+	  If Len(NewNodeText) > 0 Then
+	    oXMLNewNode.Text = NewNodeText
+	  End If
+	  
+	  'return the node
+	  Set XMLCreateNode = oXMLNewNode
+	End Function
+
+	'##################################################################
+	' Returned values
+	'##################################################################
+	Public Property Get ResultEwayTrxnStatus()
+	    ResultEwayTrxnStatus = m_ResultEwayTrxnStatus
+	End Property
+
+	Public Property Get ResultEwayTrxnNumber()
+	    ResultEwayTrxnNumber = m_ResultEwayTrxnNumber
+	End Property
+
+	Public Property Get ResultEwayTrxnOption1()
+	    ResultEwayTrxnOption1 = m_ResultEwayTrxnOption1
+	End Property
+
+	Public Property Get ResultEwayTrxnOption2()
+	    ResultEwayTrxnOption2 = m_ResultEwayTrxnOption2
+	End Property
+
+	Public Property Get ResultEwayTrxnOption3()
+	    ResultEwayTrxnOption3 = m_ResultEwayTrxnOption3
+	End Property
+
+	Public Property Get ResultEwayTrxnReference()
+	    ResultEwayTrxnReference = m_ResultEwayTrxnReference
+	End Property
+
+	Public Property Get ResultEwayAuthCode()
+	    ResultEwayAuthCode = m_ResultEwayAuthCode 
+	End Property
+
+	Public Property Get ResultEwayReturnAmount()
+	    ResultEwayReturnAmount = m_ResultEwayReturnAmount
+	End Property
+
+   
+	Public Property Get ResultEwayTrxnError()
+	    ResultEwayTrxnError = m_ResultEwayTrxnError
+	End Property
+	'##################################################################
+	' Get the values from the posted form (True) or from Parameters
+	'##################################################################
+	Public Property Get XMLFromForm()
+	    XMLFromForm = m_XMLFromForm
+	End Property
+
+	Public Property Let XMLFromForm(ByVal vNewValue)
+	    m_XMLFromForm = vNewValue
+	End Property
+
+	'##################################################################
+	' Input parameters to post to eway
+	'##################################################################
+	Public Property Get SendEwayCustomerID()
+	    SendEwayCustomerID = m_ewayCustomerID
+	End Property
+
+	Public Property Let SendEwayCustomerID(ByVal vNewValue)
+	    m_ewayCustomerID = vNewValue
+	End Property
+
+	Public Property Get SendEwayTotalAmount()
+	    SendEwayTotalAmount = m_ewayTotalAmount
+	End Property
+
+	Public Property Let SendEwayTotalAmount(ByVal vNewValue)
+	    m_ewayTotalAmount = vNewValue
+	End Property
+
+	Public Property Get SendEwayCustomerFirstName()
+	    SendEwayCustomerFirstName = m_ewayCustomerFirstName
+	End Property
+
+	Public Property Let SendEwayCustomerFirstName(ByVal vNewValue)
+	    m_ewayCustomerFirstName = vNewValue
+	End Property
+
+	Public Property Get SendEwayCustomerLastName()
+	    SendEwayCustomerLastName = m_ewayCustomerLastName
+	End Property
+
+	Public Property Let SendEwayCustomerLastName(ByVal vNewValue)
+	    m_ewayCustomerLastName = vNewValue
+	End Property
+
+	Public Property Get SendEwayCustomerEmail()
+	    SendEwayCustomerEmail = m_ewayCustomerEmail
+	End Property
+
+	Public Property Let SendEwayCustomerEmail(ByVal vNewValue)
+	    m_ewayCustomerEmail = vNewValue
+	End Property
+
+	Public Property Get SendEwayCustomerAddress()
+	    SendEwayCustomerAddress = m_ewayCustomerAddress
+	End Property
+
+	Public Property Let SendEwayCustomerAddress(ByVal vNewValue)
+	    m_ewayCustomerAddress = vNewValue
+	End Property
+
+	Public Property Get SendEwayCustomerPostcode()
+	    SendEwayCustomerPostcode = m_ewayCustomerPostcode
+	End Property
+
+	Public Property Let SendEwayCustomerPostcode(ByVal vNewValue)
+	    m_ewayCustomerPostcode = vNewValue
+	End Property
+
+	Public Property Get SendEwayCustomerInvoiceDescription()
+	    m_ewayCustomerInvoiceDescription = vNewValue
+	End Property
+
+	Public Property Let SendEwayCustomerInvoiceDescription(ByVal vNewValue)
+	    SendEwayCustomerInvoiceDescription = m_ewayCustomerInvoiceDescription
+	End Property
+
+	Public Property Get SendEwayCustomerInvoiceRef()
+	    SendEwayCustomerInvoiceRef = m_ewayCustomerInvoiceRef
+	End Property
+
+	Public Property Let SendEwayCustomerInvoiceRef(ByVal vNewValue)
+	    m_ewayCustomerInvoiceRef = vNewValue
+	End Property
+
+	Public Property Get SendEwayCardHoldersName()
+	    SendEwayCardHoldersName = m_ewayCardHoldersName
+	End Property
+
+	Public Property Let SendEwayCardHoldersName(ByVal vNewValue)
+	    m_ewayCardHoldersName = vNewValue
+	End Property
+
+	Public Property Get SendEwayCardNumber()
+	    SendEwayCardNumber = m_ewayCardNumber
+	End Property
+
+	Public Property Let SendEwayCardNumber(ByVal vNewValue)
+	    m_ewayCardNumber = vNewValue
+	End Property
+
+	Public Property Get SendEwayCardExpiryMonth()
+	    SendEwayCardExpiryMonth = m_ewayCardExpiryMonth
+	End Property
+
+	Public Property Let SendEwayCardExpiryMonth(ByVal vNewValue)
+	    m_ewayCardExpiryMonth = vNewValue
+	End Property
+
+	Public Property Get SendEwayCardExpiryYear()
+	    SendEwayCardExpiryYear = m_ewayCardExpiryYear
+	End Property
+
+	Public Property Let SendEwayCardExpiryYear(ByVal vNewValue)
+	    m_ewayCardExpiryYear = vNewValue
+	End Property
+
+	Public Property Get SendEwayTrxnNumber()
+	    SendEwayTrxnNumber = m_ewayTrxnNumber
+	End Property
+
+	Public Property Let SendEwayTrxnNumber(ByVal vNewValue)
+	    m_ewayTrxnNumber = vNewValue
+	End Property
+
+
+	Public Property Get SendEwayOption1()
+	    SendEwayOption1 = m_ewayOption1
+	End Property
+
+	Public Property Let SendEwayOption1(ByVal vNewValue)
+	    m_ewayOption1 = vNewValue
+	End Property
+
+	Public Property Get SendEwayOption2()
+	    SendEwayOption2 = m_ewayOption2
+	End Property
+
+	Public Property Let SendEwayOption2(ByVal vNewValue)
+	    m_ewayOption2 = vNewValue
+	End Property
+
+	Public Property Get SendEwayOption3()
+	    SendEwayOption3 = m_ewayOption3
+	End Property
+
+	Public Property Let SendEwayOption3(ByVal vNewValue)
+	    m_ewayOption3 = vNewValue
+	End Property
+
+	Public Property Get EwayURL()
+	    EwayURL = m_ewayURL
+	End Property
+
+	Public Property Let EwayURL(ByVal vNewValue)
+	        m_ewayURL = vNewValue
+	End Property
+
+	Public Property Get Error()
+	    Error = m_Error
+	End Property
+
+	Public Property Get ErrorMessage()
+	    ErrorMessage = m_ErrorMessage
+	End Property
+
+	' Set the default values
+	Private Sub Class_Initialize()
+	    m_XMLFromForm = False
+	    m_ewayURL = "https://www.eway.com.au/gateway/xmlpayment.asp"
+	End Sub
+
+End Class
+
+%>

@@ -382,6 +382,16 @@ h3 {
 	border-radius: 10px;	
 }
 
+.buynow1 {
+	color: white;
+	float: right;
+	background-color: #10c200;
+	padding: 12px 10px 10px;
+	margin-left: -20px;
+	margin-right: 20px;
+	border-radius: 10px;	
+}
+
 .buybucket {
 	margin-right: 18px;
 	margin-top: 5px;

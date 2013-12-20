@@ -1,0 +1,1 @@
+Do not delete. This folder is used to store UPS shipping labels.

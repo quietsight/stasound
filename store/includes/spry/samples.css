@@ -1,0 +1,34 @@
+@charset "UTF-8";
+.codeSample {
+	background-color: #CCCCCC;
+	padding: 4px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid #000000;
+	overflow: auto;
+	font-size: 1em;
+}
+.liveSample {
+	background-color: #FFFFCC;
+	color: black;
+	padding: 4px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid #000000;
+}
+.demoDiv {
+	background-color: #999999;
+	width: 400px;
+}
+.sampleText {
+	padding-left: 15px;
+}
+.EffectTrigger {
+	font-size: 12px;
+	font-style: bold;
+	cursor: pointer;
+}
+.highlited {
+	background-color: #FFFFCC;
+	color: #000000;
+}

@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+/* Overrides some of the default styles 
+   for widget error messages to include images
+----------------------------------------------- */
+
+#errors{
+	float:left;
+	height:25px;
+	font-size: 10px;
+}
+.checkboxRequiredState .formLabel, .checkboxMaxSelectionsState .formLabel,
+.selectRequiredState .formLabel, .selectInvalidState .formLabel,
+.textareaRequiredState .formLabel, .textareaMinCharsState .formLabel, .textareaMaxCharsState .formLabel,
+.textfieldRequiredState .formLabel, .textfieldInvalidFormatState .formLabel, .textfieldMinValueState .formLabel, .textfieldMaxValueState .formLabel, .textfieldMinCharsState .formLabel, .textfieldMaxCharsState .formLabel, .radioRequiredState .formLabel{
+	color: #CC3333;	
+	font-size: 10px; 
+}
+
+#Countvalidta1{
+	width:17px;
+}
+
+.textfieldRequiredState .textfieldRequiredMsg, .selectRequiredState .selectRequiredMsg, .textareaRequiredState .textareaRequiredMsg {
+	border:0px;	
+	display:inline;
+	font-size: 10px;
+}
+
+.validMsg{
+	display:none;
+}
+
+.textfieldValidState .validMsg, .textareaValidState .validMsg, .selectValidState .validMsg, .checkboxValidState .validMsg, .radioValidState .validMsg{
+	display:inline;
+}
+
+#okmessage{
+	color: green;
+	display:none;
+}
+
+.pcForms textarea {
+ /* width: 400px; */
+}
+
+.pcForms select {
+ /* width: 200px; */
+}
+	
